@@ -47,12 +47,12 @@ struct WeatherAPICurrent : Codable {
     }
     
     
-    struct func decode(json : [String:Any]) -> WeatherAPICurrent? {
+    static func decode(json : [String:Any]) -> WeatherAPICurrent? {
         
         let decoder = JSONDecoder()
         
         do{
-            let data = try JSONSerialization.data(withJSONObject: json, options: prettyPrinted)
+            let data = try JSONSerialization.data(withJSONObject: json, options: .prettyPrinted)
             let object = try decoder.decode(WeatherAPICurrent.self, from: data)
             
             return object
@@ -62,4 +62,7 @@ struct WeatherAPICurrent : Codable {
         }
         return nil
         
-    }}
+    }
+    
+    
+}
