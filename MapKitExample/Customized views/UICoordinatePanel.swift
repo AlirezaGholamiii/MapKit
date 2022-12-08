@@ -2,7 +2,7 @@
 //  UICoordinatePanel.swift
 //  MapKit
 //
-//  Created by Alireza gholami on 18/02/22.
+//  Created by Daniel Carvalho on 18/02/22.
 //
 
 import UIKit

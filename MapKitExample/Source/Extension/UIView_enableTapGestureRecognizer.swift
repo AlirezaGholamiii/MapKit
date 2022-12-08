@@ -2,7 +2,7 @@
 //  UIView_enableTapGestureRecognizer.swift
 //  MapKit
 //
-//  Created by Alireza Gholami on 18/02/22.
+//  Created by Daniel Carvalho on 18/02/22.
 //
 
 import Foundation

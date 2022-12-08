@@ -2,7 +2,7 @@
 //  UIImageView_fetchImageFromURL.swift
 //  IOS2-MapKit
 //
-//  Created by Alireza Gholami on 2022-02-17.
+//  Created by Daniel Carvalho on 2022-02-17.
 //
 
 import UIKit

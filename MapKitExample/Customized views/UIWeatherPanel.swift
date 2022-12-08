@@ -2,7 +2,7 @@
 //  UIWeatherPanel.swift
 //  MapKitExample
 //
-//  Created by Alireza Gholami on 08/03/22.
+//  Created by Daniel Carvalho on 08/03/22.
 //
 
 import UIKit
@@ -37,17 +37,19 @@ class UIWeatherPanel: UIView {
     
     private var lblTemperatureUnit : UILabel = defaultLabel(text: "C")
     
-    private var lblCondition : UILabel = defaultLabel(text: "Sunny", fontSize: 12, numberOfLines: 2)
+    private var lblCondition : UILabel = defaultLabel(text: "Cloud", fontSize: 12, numberOfLines: 2)
     
     private var lblFeelsLikeText : UILabel = defaultLabel(text: "feels like",  numberOfLines: 2)
     
-    private var lblFeelsLikeValue : UILabel = defaultLabel(text: "??", fontSize: 20, fontBold: true)
+    private var lblFeelsLikeValue : UILabel = defaultLabel(text: "?", fontSize: 15, fontBold: true)
+    
+
 
     
     private var imgWeather : UIImageView = {
         
         let img = UIImageView()
-        img.image = UIImage(systemName: "cloud.fill")
+        img.image = UIImage(systemName: "")
         img.tintColor = .gray
         img.translatesAutoresizingMaskIntoConstraints = false
         
@@ -62,11 +64,20 @@ class UIWeatherPanel: UIView {
         }
     }
     
+    public var temprutureUnit : String = "" {
+        didSet{
+            self.lblTemperatureUnit.text = temprutureUnit
+        }
+    }
+    
+    
     public var feelsLike : String = "" {
         didSet{
             self.lblFeelsLikeValue.text = feelsLike
         }
     }
+    
+    
     
     public var condition : String = "" {
         didSet{
@@ -74,11 +85,16 @@ class UIWeatherPanel: UIView {
         }
     }
     
-    public var image : UIImage? = UIImage(systemName: "cloud.fill") {
-        didSet{
-            self.imgWeather.image = image
+
+    
+    
+    public var image : String = "" {
+            didSet{
+                
+                self.imgWeather.fetchUImageFromURL(url: URL(string: image )!)
+            }
         }
-    }
+    
     
     public func imageFromUrl( url : String ) {
         self.imgWeather.fetchUImageFromURL(url: URL(string: url)!)
@@ -112,7 +128,7 @@ class UIWeatherPanel: UIView {
     private func applyConstraints(){
         
         self.heightAnchor.constraint(equalToConstant: 185).isActive = true
-        self.widthAnchor.constraint(equalToConstant: 70).isActive = true
+        self.widthAnchor.constraint(equalToConstant: 90).isActive = true
         
         self.imgWeather.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 10).isActive = true
         self.imgWeather.centerXAnchor.constraint(equalTo: self.safeAreaLayoutGuide.centerXAnchor).isActive = true

@@ -2,7 +2,7 @@
 //  UIAddressPanel.swift
 //  MapKitExample
 //
-//  Created by Alireza gholami on 01/03/22.
+//  Created by Daniel Carvalho on 01/03/22.
 //
 
 import UIKit

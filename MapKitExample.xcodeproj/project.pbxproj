@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B1E4548127DBC9E1000DF001 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E4548027DBC9E1000DF001 /* API.swift */; };
-		B1E4548427DBD2DC000DF001 /* WeatherAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E4548327DBD2DC000DF001 /* WeatherAPI.swift */; };
 		BF529FD427C690F300A9116A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF529FD327C690F300A9116A /* AppDelegate.swift */; };
 		BF529FD627C690F300A9116A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF529FD527C690F300A9116A /* SceneDelegate.swift */; };
 		BF529FD827C690F300A9116A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF529FD727C690F300A9116A /* ViewController.swift */; };
@@ -22,11 +20,11 @@
 		BF529FF627CE859000A9116A /* CLLocationManager_getAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF529FF427CE859000A9116A /* CLLocationManager_getAddress.swift */; };
 		BF529FF727CE859000A9116A /* UIImageView_fetchImageFromURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF529FF527CE859000A9116A /* UIImageView_fetchImageFromURL.swift */; };
 		BF52A08E27D7A13800A9116A /* UIWeatherPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF52A08D27D7A13800A9116A /* UIWeatherPanel.swift */; };
+		BF52A11B27DBC84900A9116A /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF52A11A27DBC84900A9116A /* API.swift */; };
+		BF52A11E27DBD2FE00A9116A /* WeatherAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF52A11D27DBD2FE00A9116A /* WeatherAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B1E4548027DBC9E1000DF001 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = SOURCE_ROOT; };
-		B1E4548327DBD2DC000DF001 /* WeatherAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAPI.swift; sourceTree = "<group>"; };
 		BF529FD027C690F300A9116A /* MapKitExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapKitExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF529FD327C690F300A9116A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF529FD527C690F300A9116A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,6 +40,8 @@
 		BF529FF427CE859000A9116A /* CLLocationManager_getAddress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLLocationManager_getAddress.swift; sourceTree = "<group>"; };
 		BF529FF527CE859000A9116A /* UIImageView_fetchImageFromURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageView_fetchImageFromURL.swift; sourceTree = "<group>"; };
 		BF52A08D27D7A13800A9116A /* UIWeatherPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIWeatherPanel.swift; sourceTree = "<group>"; };
+		BF52A11A27DBC84900A9116A /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		BF52A11D27DBD2FE00A9116A /* WeatherAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,31 +55,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B1E4547B27DBC765000DF001 /* Service */ = {
-			isa = PBXGroup;
-			children = (
-				B1E4548227DBD2C6000DF001 /* WeatherAPI */,
-				B1E4547D27DBC7A9000DF001 /* API */,
-			);
-			path = Service;
-			sourceTree = "<group>";
-		};
-		B1E4547D27DBC7A9000DF001 /* API */ = {
-			isa = PBXGroup;
-			children = (
-				B1E4548027DBC9E1000DF001 /* API.swift */,
-			);
-			path = API;
-			sourceTree = "<group>";
-		};
-		B1E4548227DBD2C6000DF001 /* WeatherAPI */ = {
-			isa = PBXGroup;
-			children = (
-				B1E4548327DBD2DC000DF001 /* WeatherAPI.swift */,
-			);
-			path = WeatherAPI;
-			sourceTree = "<group>";
-		};
 		BF529FC727C690F300A9116A = {
 			isa = PBXGroup;
 			children = (
@@ -99,7 +74,7 @@
 		BF529FD227C690F300A9116A /* MapKitExample */ = {
 			isa = PBXGroup;
 			children = (
-				B1E4547B27DBC765000DF001 /* Service */,
+				BF52A11827DBC77400A9116A /* Service */,
 				BF529FEB27C6913C00A9116A /* Customized views */,
 				BF529FE727C6910300A9116A /* Source */,
 				BF529FD327C690F300A9116A /* AppDelegate.swift */,
@@ -140,6 +115,31 @@
 				BF52A08D27D7A13800A9116A /* UIWeatherPanel.swift */,
 			);
 			path = "Customized views";
+			sourceTree = "<group>";
+		};
+		BF52A11827DBC77400A9116A /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				BF52A11C27DBD29600A9116A /* WeatherAPI */,
+				BF52A11927DBC78B00A9116A /* API */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		BF52A11927DBC78B00A9116A /* API */ = {
+			isa = PBXGroup;
+			children = (
+				BF52A11A27DBC84900A9116A /* API.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		BF52A11C27DBD29600A9116A /* WeatherAPI */ = {
+			isa = PBXGroup;
+			children = (
+				BF52A11D27DBD2FE00A9116A /* WeatherAPI.swift */,
+			);
+			path = WeatherAPI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,7 +213,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1E4548127DBC9E1000DF001 /* API.swift in Sources */,
+				BF52A11B27DBC84900A9116A /* API.swift in Sources */,
 				BF529FD827C690F300A9116A /* ViewController.swift in Sources */,
 				BF529FF627CE859000A9116A /* CLLocationManager_getAddress.swift in Sources */,
 				BF529FF727CE859000A9116A /* UIImageView_fetchImageFromURL.swift in Sources */,
@@ -222,7 +222,7 @@
 				BF529FD427C690F300A9116A /* AppDelegate.swift in Sources */,
 				BF529FED27C6916700A9116A /* UICoordinatePanel.swift in Sources */,
 				BF529FEF27C6A80B00A9116A /* UIView_addSubviews.swift in Sources */,
-				B1E4548427DBD2DC000DF001 /* WeatherAPI.swift in Sources */,
+				BF52A11E27DBD2FE00A9116A /* WeatherAPI.swift in Sources */,
 				BF529FF327CE6E9600A9116A /* UIAddressPanel.swift in Sources */,
 				BF529FD627C690F300A9116A /* SceneDelegate.swift in Sources */,
 			);
@@ -387,7 +387,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = AlirezaGholami.MapKitExample;
+				PRODUCT_BUNDLE_IDENTIFIER = carvalho.daniel.MapKitExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -416,7 +416,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = AlirezaGholami.MapKitExample;
+				PRODUCT_BUNDLE_IDENTIFIER = carvalho.daniel.MapKitExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
